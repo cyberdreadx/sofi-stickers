@@ -293,10 +293,38 @@
   @media (max-width:900px){
     .hero{grid-template-columns:1fr;text-align:center}
     .hero p.lede{margin-inline:auto}
+    .hero .btn-ghost{margin-left:.5rem}
     .sticker-fan{height:clamp(300px,70vw,400px);margin-top:1rem}
     .packs{grid-template-columns:1fr;max-width:420px;margin:0 auto}
     .quality-grid{grid-template-columns:repeat(2,1fr)}
     nav a:not(.nav-cta){display:none}
+  }
+
+  /* ── phone (≤ 480px) ──────────────────────── */
+  @media (max-width:480px){
+    .topbar{font-size:.7rem;letter-spacing:.12em}
+    .hero{padding-top:2rem;padding-bottom:2.5rem}
+    h1{font-size:2.4rem}
+    .hero .btn-primary,.hero .btn-ghost{
+      display:block;width:100%;margin:0 0 .7rem 0;text-align:center;
+    }
+    .sticker-fan{height:clamp(240px,80vw,320px)}
+    .sticker{width:clamp(120px,30vw,160px)}
+    section{padding:2.5rem 1.1rem}
+    .quality-grid{grid-template-columns:1fr 1fr;gap:1rem}
+    .q-item .icon{width:52px;height:52px;font-size:1.3rem}
+    .podium{gap:.5rem}
+    .podium .p{width:clamp(88px,28vw,120px);padding:.9rem .5rem .7rem}
+    .podium .p .nm{font-size:.88rem}
+    .podium .first{padding-bottom:1.8rem}
+    .podium .second{padding-bottom:1.1rem}
+    .podium .third{padding-bottom:.6rem}
+    .lb-table li{gap:.6rem;padding:.7rem .8rem}
+    .lb-table .tier{display:none}
+    .circle-sub{font-size:.9rem}
+    .goal-labels{font-size:.72rem}
+    footer .socials a{margin:0 .5rem;font-size:.78rem}
+    .ship-card{padding:1.8rem 1.2rem}
   }
 </style>
 </head>
@@ -465,6 +493,7 @@
 </section>
 
 
+<section id="shipping">
   <div class="ship reveal">
     <div class="ship-card">
       <span class="gold">Shipping &amp; delivery</span>
