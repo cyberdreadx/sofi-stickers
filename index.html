@@ -326,6 +326,64 @@
     footer .socials a{margin:0 .5rem;font-size:.78rem}
     .ship-card{padding:1.8rem 1.2rem}
   }
+
+  /* ── hero sticker images ────────────────────── */
+  .sticker .photo-img{
+    width:100%;height:78%;
+    border-radius:12px;
+    object-fit:contain;
+    background:var(--blush);
+    padding:6px;
+    display:block;
+  }
+
+  /* ── sticker gallery ───────────────────────── */
+  .gallery{background:var(--rosewood);color:var(--cream);overflow:hidden}
+  .gallery .eyebrow{color:var(--satin)}
+  .gallery h2{color:#fff}
+  .gallery-sub{text-align:center;max-width:48ch;margin:-1.2rem auto 2.6rem;font-weight:300;color:var(--blush);font-size:.95rem}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:clamp(.8rem,2vw,1.5rem);
+  }
+  .gallery-item{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(232,155,180,.2);
+    border-radius:18px;
+    padding:clamp(.5rem,1.2vw,.9rem);
+    transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s;
+    cursor:pointer;
+    opacity:0;transform:translateY(18px);
+  }
+  .gallery-item.in{opacity:1;transform:none}
+  .gallery-item:hover{
+    transform:translateY(-8px) scale(1.04);
+    box-shadow:0 16px 40px rgba(214,71,122,.3);
+    border-color:var(--satin);
+  }
+  .gallery-item img{
+    width:100%;
+    display:block;
+    border-radius:12px;
+    filter:drop-shadow(0 4px 12px rgba(0,0,0,.25));
+  }
+  .gallery-item .sticker-label{
+    text-align:center;
+    font-family:'Pinyon Script',cursive;
+    font-size:clamp(.9rem,1.3vw,1.1rem);
+    color:var(--satin);
+    margin-top:.5rem;
+    padding-bottom:.2rem;
+  }
+  @media(max-width:900px){
+    .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-width:480px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);gap:.5rem}
+    .gallery-item{border-radius:12px;padding:.4rem}
+    .gallery-item .sticker-label{font-size:.85rem}
+  }
 </style>
 </head>
 <body>
@@ -336,6 +394,7 @@
   <a class="logo" href="#">Sofi Ostro<span>sticker shop</span></a>
   <nav>
     <a href="#packs">Packs</a>
+    <a href="#gallery">Gallery</a>
     <a href="#quality">Quality</a>
     <a href="#circle">Leaderboard</a>
     <a href="#shipping">Shipping</a>
@@ -353,19 +412,18 @@
   </div>
 
   <div class="sticker-fan" aria-hidden="true">
-    <!-- Swap each .photo div for: <img src="cutout-1.png" alt="" style="width:100%;height:78%;object-fit:cover;border-radius:12px"> -->
     <div class="sticker s1">
-      <div class="photo">black satin · staircase</div>
+      <img src="sofi_stickers_v1/IMG_8466_sticker.png" alt="Sofi sticker - satin dress" class="photo-img">
       <div class="tag">the classic</div>
     </div>
     <div class="sticker s2">
-      <div class="photo">pink gingham · bows</div>
-      <div class="tag">coquette</div>
+      <img src="sofi_stickers_v1/IMG_8468_sticker.png" alt="Sofi sticker - pearl goddess" class="photo-img">
+      <div class="tag">the muse</div>
       <div class="bow">🎀</div>
     </div>
     <div class="sticker s3">
-      <div class="photo">white guitar · "Angie"</div>
-      <div class="tag">the muse</div>
+      <img src="sofi_stickers_v1/IMG_8473_sticker.png" alt="Sofi sticker - pink ruffle" class="photo-img">
+      <div class="tag">coquette</div>
     </div>
   </div>
 </section>
@@ -394,7 +452,7 @@
       <div class="pack reveal">
         <h3>The Mini</h3>
         <div class="count">3 stickers</div>
-        <div class="price"><small>$</small>7</div>
+        <div class="price"><small>$</small>9</div>
         <ul>
           <li>3 die-cut photo stickers</li>
           <li>2–3 in. matte vinyl</li>
@@ -408,11 +466,11 @@
         <div class="badge">Most loved</div>
         <h3>The Collection</h3>
         <div class="count">8 stickers</div>
-        <div class="price"><small>$</small>15</div>
+        <div class="price"><small>$</small>18</div>
         <ul>
           <li>8 die-cut photo stickers</li>
           <li>Every signature look included</li>
-          <li>Free U.S. shipping</li>
+          <li>Free U.S. shipping over $15</li>
           <li>Hand-signed thank-you card</li>
         </ul>
         <!-- PASTE YOUR REAL LINK -->
@@ -422,7 +480,7 @@
       <div class="pack reveal">
         <h3>The Archive</h3>
         <div class="count">15 stickers</div>
-        <div class="price"><small>$</small>25</div>
+        <div class="price"><small>$</small>30</div>
         <ul>
           <li>Full 15-sticker set</li>
           <li>Includes 2 holographic exclusives</li>
@@ -433,6 +491,33 @@
         <a class="btn btn-primary" href="https://YOUR-GUMROAD-OR-STRIPE-LINK/archive" target="_blank" rel="noopener">Buy the Archive</a>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">the full set</span>
+      <h2>All 15 sticker designs</h2>
+    </div>
+    <p class="gallery-sub reveal">Every sticker in the Archive — waterproof matte vinyl, die-cut to the edge. Tap to zoom.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8463_sticker.png" alt="Sofi sticker 1" loading="lazy"><div class="sticker-label">beach day</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8464_sticker.png" alt="Sofi sticker 2" loading="lazy"><div class="sticker-label">sunset pose</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8465_sticker.png" alt="Sofi sticker 3" loading="lazy"><div class="sticker-label">the getaway</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8466_sticker.png" alt="Sofi sticker 4" loading="lazy"><div class="sticker-label">satin dreams</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8467_sticker.png" alt="Sofi sticker 5" loading="lazy"><div class="sticker-label">the songwriter</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8468_sticker.png" alt="Sofi sticker 6" loading="lazy"><div class="sticker-label">ocean pearls</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8469_sticker.png" alt="Sofi sticker 7" loading="lazy"><div class="sticker-label">siren</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8470_sticker.png" alt="Sofi sticker 8" loading="lazy"><div class="sticker-label">mermaid hour</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8471_sticker.png" alt="Sofi sticker 9" loading="lazy"><div class="sticker-label">sea goddess</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8472_sticker.png" alt="Sofi sticker 10" loading="lazy"><div class="sticker-label">shell whisper</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8473_sticker.png" alt="Sofi sticker 11" loading="lazy"><div class="sticker-label">pink cloud</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8474_sticker.png" alt="Sofi sticker 12" loading="lazy"><div class="sticker-label">ruffle queen</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8475_sticker.png" alt="Sofi sticker 13" loading="lazy"><div class="sticker-label">coquette</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8476_sticker.png" alt="Sofi sticker 14" loading="lazy"><div class="sticker-label">blushing</div></div>
+      <div class="gallery-item"><img src="sofi_stickers_v1/IMG_8477_sticker.png" alt="Sofi sticker 15" loading="lazy"><div class="sticker-label">ballerina</div></div>
     </div>
   </div>
 </section>
@@ -519,6 +604,19 @@
     es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.15});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* staggered gallery reveal */
+  const gio = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); gio.unobserve(e.target); }
+    });
+  },{threshold:.1});
+  document.querySelectorAll('.gallery-item').forEach((el,i)=>{
+    el.style.transitionDelay = (i * .06) + 's';
+    el.style.transitionDuration = '.5s';
+    el.style.transitionProperty = 'opacity, transform';
+    gio.observe(el);
+  });
 
   /* ── Collector's Circle ─────────────────────
      Data lives in leaderboard.json next to this file.
