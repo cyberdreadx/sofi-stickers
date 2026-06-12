@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sofi Ostro — Sticker Shop</title>
 <meta name="description" content="Die-cut photo stickers of Sofi Ostro. Waterproof vinyl, shipped worldwide.">
+<link rel="canonical" href="https://sofi-stickers.netlify.app">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎀</text></svg>">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sofi-stickers.netlify.app">
+<meta property="og:title" content="Sofi Ostro — Sticker Shop">
+<meta property="og:description" content="Die-cut photo stickers of Sofi Ostro. 15 waterproof matte vinyl designs, shipped worldwide. From $9.">
+<meta property="og:image" content="https://sofi-stickers.netlify.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sofi Ostro — Sticker Shop">
+<meta name="twitter:description" content="Die-cut photo stickers of Sofi Ostro. 15 waterproof matte vinyl designs, shipped worldwide.">
+<meta name="twitter:image" content="https://sofi-stickers.netlify.app/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,600&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -282,6 +297,29 @@
   footer .socials a:hover{color:#fff;border-color:var(--satin)}
   footer small{opacity:.55;font-weight:300;letter-spacing:.06em}
 
+  /* ── email signup ───────────────────────── */
+  .notify{background:linear-gradient(180deg,var(--cream) 0%,var(--blush) 100%)}
+  .signup-form{
+    display:flex;gap:.6rem;max-width:420px;margin:0 auto;
+  }
+  .signup-form input{
+    flex:1;padding:.9rem 1.3rem;border:1.5px solid var(--blush-deep);
+    border-radius:99px;font-family:'Jost',sans-serif;font-size:.95rem;
+    background:var(--white);color:var(--rosewood);
+    transition:border-color .25s,box-shadow .25s;
+    outline:none;
+  }
+  .signup-form input:focus{
+    border-color:var(--ribbon);
+    box-shadow:0 0 0 3px rgba(214,71,122,.15);
+  }
+  .signup-form input::placeholder{color:var(--satin);opacity:.7}
+  .signup-form .btn{padding:.9rem 1.6rem;white-space:nowrap;border:none;cursor:pointer;font-size:.82rem}
+  @media(max-width:480px){
+    .signup-form{flex-direction:column}
+    .signup-form .btn{width:100%}
+  }
+
   /* reveal on scroll */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
@@ -467,7 +505,7 @@
           <li>Sealed in a blush envelope</li>
         </ul>
         <!-- PASTE YOUR REAL LINK: replace href below with your Gumroad/Stripe checkout URL -->
-        <a class="btn btn-primary" href="https://buy.stripe.com/test_dRm7sL1nf7JR7Me41m7EQ00" target="_blank" rel="noopener">Buy the Mini</a>
+        <a class="btn btn-primary" href="https://buy.stripe.com/test_6oU28r9TL9RZ2rU0Pa7EQ03" target="_blank" rel="noopener">Buy the Mini</a>
       </div>
 
       <div class="pack featured reveal">
@@ -482,7 +520,7 @@
           <li>Hand-signed thank-you card</li>
         </ul>
         <!-- PASTE YOUR REAL LINK -->
-        <a class="btn btn-primary" href="https://buy.stripe.com/test_28EfZh0jb0hpc2u1Te7EQ01" target="_blank" rel="noopener">Buy the Collection</a>
+        <a class="btn btn-primary" href="https://buy.stripe.com/test_fZueVd2rj2px8Qi2Xi7EQ04" target="_blank" rel="noopener">Buy the Collection</a>
       </div>
 
       <div class="pack reveal">
@@ -496,7 +534,7 @@
           <li>First access to new drops</li>
         </ul>
         <!-- PASTE YOUR REAL LINK -->
-        <a class="btn btn-primary" href="https://buy.stripe.com/test_bJe7sL5DvfcjfeG69u7EQ02" target="_blank" rel="noopener">Buy the Archive</a>
+        <a class="btn btn-primary" href="https://buy.stripe.com/test_8x27sL7LD0hp7MegO87EQ05" target="_blank" rel="noopener">Buy the Archive</a>
       </div>
 
     </div>
@@ -593,6 +631,20 @@
       <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);margin-top:.4rem">From Miami, with love</h2>
       <p>Orders ship within 2–3 business days. U.S. delivery in 3–5 days, international in 7–14. Tracking included on every order — and every envelope smells faintly of vanilla. That part's on purpose.</p>
     </div>
+  </div>
+</section>
+
+<section class="notify" id="notify">
+  <div class="wrap" style="max-width:560px;text-align:center">
+    <div class="section-head reveal">
+      <span class="eyebrow">stay in the loop</span>
+      <h2>New drops & restocks</h2>
+    </div>
+    <p class="reveal" style="font-weight:300;margin:-1rem auto 1.8rem;max-width:42ch;font-size:.95rem">Get notified when new sticker designs drop, limited editions restock, or when we hit the 500-pack holographic unlock. No spam, ever.</p>
+    <form name="email-signup" method="POST" data-netlify="true" class="signup-form reveal">
+      <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Notify me 🎀</button>
+    </form>
   </div>
 </section>
 
