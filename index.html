@@ -298,11 +298,19 @@
     .packs{grid-template-columns:1fr;max-width:420px;margin:0 auto}
     .quality-grid{grid-template-columns:repeat(2,1fr)}
     nav a:not(.nav-cta){display:none}
+    header{padding:1rem clamp(.8rem,3vw,1.5rem)}
+    .logo{font-size:1.05rem}
+    .logo span{font-size:1.1rem}
+    .nav-cta{padding:.5rem 1rem;font-size:.75rem;letter-spacing:.12em}
   }
 
   /* ── phone (≤ 480px) ──────────────────────── */
   @media (max-width:480px){
     .topbar{font-size:.7rem;letter-spacing:.12em}
+    header{padding:.75rem .8rem}
+    .logo{font-size:.9rem;letter-spacing:.08em}
+    .logo span{font-size:.95rem;margin-left:.2rem}
+    .nav-cta{padding:.45rem .85rem;font-size:.7rem;letter-spacing:.1em}
     .hero{padding-top:2rem;padding-bottom:2.5rem}
     h1{font-size:2.4rem}
     .hero .btn-primary,.hero .btn-ghost{
