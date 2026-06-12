@@ -1,0 +1,13 @@
+{
+  "goal": 500,
+  "packsSold": 23,
+  "players": [
+    { "name": "bella.from.miami", "points": 11 },
+    { "name": "coquette_queen", "points": 8 },
+    { "name": "Stevie D", "points": 6 },
+    { "name": "pink.gingham.girl", "points": 5 },
+    { "name": "Marco V", "points": 3 },
+    { "name": "laptop.decorator", "points": 3 },
+    { "name": "Anya", "points": 1 }
+  ]
+}
